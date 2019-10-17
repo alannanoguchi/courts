@@ -3,22 +3,13 @@
 
 {% block content %}
 
-<h1 style= "font-family: Fjalla One; font-style: sans-serif; font-size: 50px">{{ msg }}</h1>
-<form class="md-form">
-    <div class="file-field">
-        <div class="mb-1">
-        <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
-            class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
-        </div>
-        <div class="d-flex justify-content-center">
-        <div class="btn btn-mdb-color btn-rounded float-left">
-            <span>Add photo</span>
-            <input type="file">
-        </div>
-        </div>
-    </div>
-</form>
-      
+<div style="margin-top:60px"></div>
+<h1 style= "font-family: Fjalla One; font-style: sans-serif; font-size: 50px">{{ msg }}</h1>  
+<div style="margin-top:60px"></div>
+
+
+<img src="https://images.unsplash.com/photo-1467990043612-706c358aa7eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" class="rounded float-center" width="500" height="300">
+<div style="margin-top:60px"></div>
 
 <form>
         <div class="form-row">
@@ -65,3 +56,21 @@
         <button class="btn btn-primary" type="submit">Create Player</button>
       </form>
 {% endblock %}
+
+
+<!-- 
+<form class="md-form">
+        <div class="file-field">
+            <div class="mb-1">
+            <img src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                class="rounded-circle z-depth-1-half avatar-pic" alt="example placeholder avatar">
+            </div>
+            <div class="d-flex justify-content-center">
+            <div class="btn btn-mdb-color btn-rounded float-left">
+                <span>Add photo</span>
+                <input type="file">
+            </div>
+            </div>
+        </div>
+    </form> -->
+        
