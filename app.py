@@ -29,22 +29,24 @@ def signup():
 def signup_submit():
     """Submit new player."""
     player = {
-        'first name':request.form.get('first name'),
-        'last name': request.form.get('last name'),
+        'firstname':request.form.get('firstname'),
+        'lastname': request.form.get('lastname'),
+        'username':request.form.get('username'),
         'city':request.form.get('city'),
-        'state':request.form.get('state')
+        'state':request.form.get('state'),
+        'zip':request.form.get('zip')
     }
+    print(player)
     player_id = players.insert_one(player).inserted_id
-    return redirect(url_for('playerhub_show.html', player_id=player_id))
+    return redirect(url_for('playerhub_show', player_id=player_id))
 
 
 # This route will show one item
 @app.route('/playerhub/<player_id>')
 def playerhub_show(player_id):
     """Show the player hub."""
-    # item = items.find_one({'_id': ObjectId(item_id)})
     player = players.find_one({'_id': ObjectId(player_id)})
-    return render_template('playerhub_show', player=player)
+    return render_template('playerhub_show.html', player=player)
 
 
 if __name__ == '__main__':
